@@ -1,0 +1,24 @@
+{
+  "name": "grpc-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishavrishu-creator/grpc-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishavrishu-creator/grpc-todo/issues"
+  },
+  "homepage": "https://github.com/Rishavrishu-creator/grpc-todo#readme",
+  "dependencies": {
+    "grpc": "^1.24.7"
+  }
+}
