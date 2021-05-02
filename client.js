@@ -12,7 +12,7 @@ client.createTodo({
 },function(err,response){
     if(!err)
     {
-    console.log("Receiverd from server"+JSON.stringify(response))
+    console.log("Received from server"+JSON.stringify(response))
     }
     else{
         console.log(err)
