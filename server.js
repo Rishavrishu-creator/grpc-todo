@@ -5,10 +5,10 @@ var grpcObject=grpc.loadPackageDefinition(packageDef);
 var todoPackage=grpcObject.todoPackage;
 
 
-var server=new grpc.server();
+var server=new grpc.Server();
 server.bind("0.0.0.0:40000",grpc.ServerCredentials.createInsecure());
 server.addService(todoPackage.Todo.service,{
-      "creeateTodo":createTodo,
+      "createTodo":createTodo,
       "readTodos":readTodos
 })
 var todos=[]
