@@ -20,7 +20,7 @@ function createTodo(call,callback)
         "text":call.request.text
     }
 todos.push(todoItem)
-
+callback(null,todoItem)
 }
 
 function readTodos(call,callback){
