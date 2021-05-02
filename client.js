@@ -20,3 +20,12 @@ client.createTodo({
 })
 
 
+client.readTodos({},function(err,response){
+    if(!err)
+    {
+    console.log("Received from server"+JSON.stringify(response))
+    }
+    else{
+        console.log(err)
+    }
+})
