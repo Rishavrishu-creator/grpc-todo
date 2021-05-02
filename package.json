@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Rishavrishu-creator/grpc-todo#readme",
   "dependencies": {
+    "@grpc/proto-loader": "^0.6.1",
     "grpc": "^1.24.7"
   }
 }
