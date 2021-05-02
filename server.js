@@ -11,9 +11,16 @@ server.addService(todoPackage.Todo.service,{
       "creeateTodo":createTodo,
       "readTodos":readTodos
 })
+var todos=[]
+
 function createTodo(call,callback)
 {
-console.log(call)
+    var todoItem = {
+        "id":todos.length+1,
+        "text":call.request.text
+    }
+todos.push(todoItem)
+
 }
 
 function readTodos(call,callback){
