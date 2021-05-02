@@ -23,7 +23,10 @@ client.createTodo({
 client.readTodos({},function(err,response){
     if(!err)
     {
-    console.log("Received from server"+JSON.stringify(response))
+    console.log("Read Todos from server"+JSON.stringify(response))
+    response.items.forEach(i=>{
+        console.log(i.text)
+    })
     }
     else{
         console.log(err)

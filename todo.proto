@@ -6,6 +6,7 @@ service Todo
 {
     rpc createTodo(TodoItem) returns (TodoItem);
     rpc readTodos(noParams) returns (TodoItems);
+    rpc readTodosStream(noParams) returns (stream TodoItem);
 }
 
 message noParams{}
@@ -13,6 +14,8 @@ message noParams{}
 message TodoItems{
     repeated TodoItem items=1;
 }
+
+
 
 message TodoItem{
     int32 id=1;

@@ -9,9 +9,16 @@ var server=new grpc.Server();
 server.bind("0.0.0.0:40000",grpc.ServerCredentials.createInsecure());
 server.addService(todoPackage.Todo.service,{
       "createTodo":createTodo,
-      "readTodos":readTodos
+      "readTodos":readTodos,
+      "readTodoStream":readTodoStream
 })
 var todos=[]
+
+function readTodoStream()
+{
+
+}
+
 
 function createTodo(call,callback)
 {
@@ -25,6 +32,7 @@ callback(null,todoItem)
 
 function readTodos(call,callback){
 
+    callback(null,{"items":todos})
 
 }
 
