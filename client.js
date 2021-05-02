@@ -19,7 +19,16 @@ client.createTodo({
     }
 })
 
+var call = client.readTodosStream()
+call.on("data",function(item){
+    console.log("Received item from server"+JSON.stringify(item))
+    
+})
 
+call.on("end",function(){
+    console("Server done!!")
+})
+/*
 client.readTodos({},function(err,response){
     if(!err)
     {
@@ -32,3 +41,4 @@ client.readTodos({},function(err,response){
         console.log(err)
     }
 })
+*/

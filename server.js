@@ -10,13 +10,15 @@ server.bind("0.0.0.0:40000",grpc.ServerCredentials.createInsecure());
 server.addService(todoPackage.Todo.service,{
       "createTodo":createTodo,
       "readTodos":readTodos,
-      "readTodoStream":readTodoStream
+      "readTodosStream":readTodosStream
 })
 var todos=[]
 
-function readTodoStream()
+function readTodoStream(call,callback)
 {
-
+todos.forEach(t=>{
+    call.write(t)
+})
 }
 
 
