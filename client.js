@@ -26,7 +26,7 @@ call.on("data",function(item){
 })
 
 call.on("end",function(){
-    console("Server done!!")
+    console.log("Server done!!")
 })
 /*
 client.readTodos({},function(err,response){
@@ -42,3 +42,4 @@ client.readTodos({},function(err,response){
     }
 })
 */
+

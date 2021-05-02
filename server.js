@@ -14,12 +14,7 @@ server.addService(todoPackage.Todo.service,{
 })
 var todos=[]
 
-function readTodoStream(call,callback)
-{
-todos.forEach(t=>{
-    call.write(t)
-})
-}
+
 
 
 function createTodo(call,callback)
@@ -30,6 +25,14 @@ function createTodo(call,callback)
     }
 todos.push(todoItem)
 callback(null,todoItem)
+}
+
+function readTodosStream(call,callback)
+{
+todos.forEach(t=>{
+    call.write(t)
+})
+call.end()
 }
 
 function readTodos(call,callback){
